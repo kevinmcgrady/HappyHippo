@@ -1,6 +1,8 @@
 import { initTRPC } from '@trpc/server';
 
-const t = initTRPC.context().create();
+import { ExpressContext } from '@/server';
+
+const t = initTRPC.context<ExpressContext>().create();
 
 export const router = t.router;
 
