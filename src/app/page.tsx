@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { Icons } from '@/components/Icons';
 import { MaxWidthWrapper } from '@/components/MaxWidthWrapper';
+import { ProductReel } from '@/components/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { PERKS } from '@/constants/perks';
 
@@ -26,7 +27,12 @@ export default function Home() {
             <Button variant='outline'>Our Quality Promise &rarr;</Button>
           </div>
         </div>
-        {/* {todo: List products} */}
+        <ProductReel
+          title='Brand New'
+          subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          href='/products'
+          query={{ sort: 'desc', limit: 4 }}
+        />
       </MaxWidthWrapper>
       <section className='border-t border-gray-200 bg-gray-50'>
         <MaxWidthWrapper className='py-20'>
