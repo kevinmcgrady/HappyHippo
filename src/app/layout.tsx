@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import React from 'react';
 import { Toaster } from 'sonner';
 
+import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { cn } from '@/lib/utils';
 import { Providers } from '@/providers/providers';
@@ -30,6 +31,7 @@ export default function RootLayout({
           <Providers>
             <Navbar />
             <div className='flex-grow flex-1'>{children}</div>
+            <Footer />
           </Providers>
         </main>
         <Toaster position='top-center' richColors />
